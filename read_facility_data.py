@@ -27,25 +27,24 @@ code = {"s6ha-ppgi":["units","sum", "affordable_units"],
 ################ Retrieve Facility Data via API #####################
 
 def get_blockgroups():
-	'''
-	Read blockgroup data via API
-	'''
-	client = Socrata("data.cityofchicago.org", None)
+    '''
+    Read blockgroup data via API
+    '''
+    client = Socrata("data.cityofchicago.org", None)
 
-	neighborhood = gpd.read_file("https://data.cityofchicago.org/resource/bt9m-d2mf.geojson?$limit=9999999")
-	neighborhood["geoid10"] = neighborhood["geoid10"].map(lambda x: str(x)[:12])
-	blockgroups = neighborhood.dissolve(by='geoid10')[['geometry']].reset_index()
-	return blockgroups
+    neighborhood = gpd.read_file("https://data.cityofchicago.org/resource/bt9m-d2mf.geojson?$limit=9999999")
+    neighborhood["geoid10"] = neighborhood["geoid10"].map(lambda x: str(x)[:12])
+    blockgroups = neighborhood.dissolve(by='geoid10')[['geometry']].reset_index()
+    return blockgroups
 
 
 
 def retrieve_gov_data(code):
-	'''
-	Retrieve facility data via API
-	Input:
-		code: dict
-	'''
-    
+    '''
+    Retrieve facility data via API
+    Input:
+        code: dict
+    '''
     df = blockgroups
     
     for k,v in code.items():
@@ -88,11 +87,10 @@ def map_plot(df, col, color = 'Blues'):
 ################ Pull Together #####################
 
 def go(code):
+    blockgroups = get_blockgroups()
 
-	blockgroups = get_blockgroups()
-
-	# This line takes about 20 mins to run.
-	df = retrieve_gov_data(code)
-	map_plot(df, 'graffiti_count', "OrRd")
-	map_plot(df, 'abandoned_house', "OrRd")
+    # This line takes about 20 mins to run.
+    df = retrieve_gov_data(code)
+    map_plot(df, 'graffiti_count', "OrRd")
+    map_plot(df, 'abandoned_house', "OrRd")
 
