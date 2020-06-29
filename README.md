@@ -1,4 +1,4 @@
-# ChicagoCrime
+# ChicagoCrime (Machine Learning)
 
 ## Introduction
 
@@ -43,9 +43,11 @@
 		1. pl_choropleth_map.py
 
 			Create county-level crime-rate interactive choropleth plot.
-
+	
+			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/3.png" width="500">
 			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/1.png" width="500">
-			![](readmepic/2.png)
+			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/2.png" width="500">
+			
 
 
 		2. pl_heat_map.py
