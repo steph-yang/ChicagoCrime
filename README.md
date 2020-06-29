@@ -53,8 +53,10 @@
 		2. pl_heat_map.py
 
 			Create heat map of homicide cases in Chicago on Google Map.
+			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/4.png" width="500">
 
 		3. pl_type_count.py
+			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/4.5.png" width="400">
 
 
 
