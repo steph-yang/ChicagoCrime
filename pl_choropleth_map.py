@@ -22,28 +22,27 @@ year = 2017
 
 
 def read_data(year):
-	'''
-	Import functions from read_FBI_data and read
-	in data
-	Input:
-		year: int, 2010~2018
-	Output: df
-	'''
-	df = read_FBI_data.read_crime_data(year)
-	df = read_FBI_data.merge_fips(df)
-	df = read_FBI_data.calculate_crime_rate(df, ["Violent", "Property", \
-												"Total", "Rape"])
-	df = read_FBI_data.check_nan(df)
-	return df
+    '''
+    Import functions from read_FBI_data and read
+    in data
+    Input:
+	year: int, 2010~2018
+    Output: df
+    '''
+    df = read_FBI_data.read_crime_data(year)
+    df = read_FBI_data.merge_fips(df)
+    df = read_FBI_data.calculate_crime_rate(df, ["Violent", "Property", "Total", "Rape"])
+    df = read_FBI_data.check_nan(df)
+    return df
 
 
 ############## Interactive Choropleth Map (County level) ###################
 
 
 def plot_rate_county(df, year):
-	'''
-	Create County-level choropleth map
-	'''
+    '''
+    Create County-level choropleth map
+    '''
     colorscale = ["#deebf7", "#d2e3f3", "#c6dbef", "#b3d2e9", "#9ecae1",
         "#85bcdb", "#6baed6", "#57a0ce", "#4292c6"
     ]
@@ -70,15 +69,15 @@ def plot_rate_county(df, year):
 ##############  Interactive Choropleth Map (State level) ###################
 
 def plot_rate_state(df, year, col):
-	'''
-	Create State-level interactive map
-	'''
-	# Group by counties into state
-	state_df = df.groupby(["State", "state_id"]).agg({k:"sum" for k in \
+    '''
+    Create State-level interactive map
+    '''
+    # Group by counties into state
+    state_df = df.groupby(["State", "state_id"]).agg({k:"sum" for k in \
 				["Population", "Violent", "Property", "Total", "Rape"]}).reset_index()
-	state_df = calculate_crime_rate(state_df, ["Violent", "Property", "Total", "Rape"])
+    state_df = calculate_crime_rate(state_df, ["Violent", "Property", "Total", "Rape"])
 
-	# Plot
+    # Plot
     fig = go.Figure(data=go.Choropleth(
         locations=state_df['state_id'], # Spatial coordinates
         z = state_df[col].astype(float), # Data to be color-coded
@@ -98,8 +97,8 @@ def plot_rate_state(df, year, col):
 ##############  Pull Together ###################
 
 def go(year):
-	df = read_data(year)
-	plot_rate_county(df, year)
-	plot_rate_state(df, year, "Total_rate")
+    df = read_data(year)
+    plot_rate_county(df, year)
+    plot_rate_state(df, year, "Total_rate")
 
 	
