@@ -44,6 +44,10 @@
 
 			Create county-level crime-rate interactive choropleth plot.
 
+			![](readmepic/1.png)
+			![](readmepic/2.png)
+
+
 		2. pl_heat_map.py
 
 			Create heat map of homicide cases in Chicago on Google Map.
@@ -52,7 +56,7 @@
 
 
 
-	3. Machine Learning
+	3. Machine Learning files
 		1. ml_unsupervised_clustering.py
 
 			In this part, we use unsurpervised machine learning algorithms to divide 51 states of U.S. into three groups based on demographic features and crime rates. We applied both hierarchical clusteirng and k-means and selected states in the same group with Illinois in both methods for further analysis.
@@ -65,3 +69,4 @@
 
 			In this part, we regress crime rate by block against facility data. Data are splitted into training(80%) and testing set(20%) and normalization is performed before regression. Also, we applied bootstrapping to test stability of the model. 
 
+3. Report and Slides: final report and presentation slides
