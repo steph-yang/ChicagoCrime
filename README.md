@@ -64,7 +64,7 @@
 	3. Machine Learning files
 		1. ml_unsupervised_clustering.py
 		
-		In this part, we use unsurpervised machine learning algorithms to divide 51 states of U.S. into three groups based on demographic features and crime rates. We applied both hierarchical clusteirng and k-means and selected states in the same group with Illinois in both methods for further analysis. <br>
+	In this part, we use unsurpervised machine learning algorithms to divide 51 states of U.S. into three groups based on demographic features and crime rates. We applied both hierarchical clusteirng and k-means and selected states in the same group with Illinois in both methods for further analysis. <br>
 
 			1. Hierarchical Clustering: Ward
 			
