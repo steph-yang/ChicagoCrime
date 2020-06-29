@@ -44,7 +44,7 @@
 
 			Create county-level crime-rate interactive choropleth plot.
 
-			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/1.png" width="200">
+			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/1.png" width="500">
 			![](readmepic/2.png)
 
 
