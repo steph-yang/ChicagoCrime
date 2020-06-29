@@ -1,4 +1,4 @@
-# ChicagoCrime (Machine Learning)
+# ChicagoCrime (Machine Learning Project)
 
 ## Introduction
 
@@ -69,10 +69,12 @@
 			<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/6.png" width="500"> <br>
 			2. K-means: K = 3 <br>
 				<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/7.png" width="500">
-				<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/8.png" width="500">
-
+				<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/8.png" width="500"><br>
 		2. ml_supervised_regression.py
-
-			In this part, we regress crime rate by block against facility data. Data are splitted into training(80%) and testing set(20%) and normalization is performed before regression. Also, we applied bootstrapping to test stability of the model. 
+		<p>In this part, we regress crime rate by block against facility data. Data are splitted into training(80%) and testing set(20%) and normalization is performed before regression. Also, we applied bootstrapping to test stability of the model.  <br>
+		<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/9.png" width="500">
+		<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/11.png" width="500">
+		<img src="https://github.com/steph-yang/ChicagoCrime/blob/master/readmepic/10.png" width="500">
+	
 
 3. Report and Slides: final report and presentation slides
