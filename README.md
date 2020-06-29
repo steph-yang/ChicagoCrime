@@ -44,7 +44,7 @@
 
 			Create county-level crime-rate interactive choropleth plot.
 
-			![](readmepic/1.png)
+			![](readmepic/1.png | width=100)
 			![](readmepic/2.png)
 
 
