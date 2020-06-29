@@ -1,6 +1,5 @@
 # ChicagoCrime
 
-
 ## Introduction
 
 <p>		This research aims at reevaluating public safety problem in Chicago, more specifically, identifying key features behind blocks with high crime rate and devising public policy solutions accordingly. In most social science literature, demographics are known to exhibit strong correlations with crime; yet, we believe demographics alone are not sufficient to explain this complex issue. Therefore alongside traditional demographics,we introduce two newgroups – infrastructure and traffic flow – to better capture neighborhood characteristics. </p><br>
@@ -9,19 +8,23 @@
 
 ## Data Source
 
-In this project, we use three data sources:
 1. Main Research Data
 
-	1. Crime data (xls):  FBI Offenses Known to Law Enforcement - Crime in the U.S. Archive, including 2010~2018<br>
+	1. Crime data (xls):  FBI Offenses Known to Law Enforcement - Crime in the U.S. Archive, including 2010~2018 <br>
 	Data downloaded from <https://ucr.fbi.gov/crime-in-the-u.s>
-	2. ACS Census data (API): Demographic features <br>
+	2. Crime Cases in Chicago in 2019 (csv): City Data Portal of Chicago
+	Data downloaded from <https://data.cityofchicago.org/Public-Safety/Crimes-2019/w98m-zvie>
+	3. ACS Census data (API): Demographic features <br>
 	Data retrieved via Census API as: <https://www.census.gov/data/developers/data-sets/acs-1year.html>
-	3.  
-3. Supportive Data
+	4. Property Value (csv): <https://www.experian.com/blogs/ask-experian/research/median-home-values-by-state/>
+	5. Facility Data (API): from City Data Portal: <https://data.cityofchicago.org/>
+	6. Taxi Trips (API): from Chicago Data Portal: <https://data.cityofchicago.org/>
+2. Supportive Data
+
 	1. Census tract boundaries: Census tract for Chicago
-4. Property Value: <https://www.experian.com/blogs/ask-experian/research/median-home-values-by-state/>
-5. State-County-City Match: From government website
-6. Taxi Trips: From [Chicago Data Portal]<https://data.cityofchicago.org/>
+
+	2. State-County-City Match: From government website
+
 
 ## Directory
 1. Data: all data used in this research except API data. <br>
