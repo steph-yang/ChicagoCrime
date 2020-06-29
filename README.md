@@ -21,9 +21,9 @@
 	6. Taxi Trips (API): from Chicago Data Portal: <https://data.cityofchicago.org/>
 2. Supportive Data
 
-	1. Census tract boundaries: Census tract for Chicago
+	1. Census tract boundaries (geojson): Census tract for Chicago
 
-	2. State-County-City Match: From government website
+	2. State-County-City Match (csv): From government website
 
 
 ## Directory
@@ -37,38 +37,31 @@
 
 		2. read_facility_data.py
 
-			Retrieve city facility data via 
+			Retrieve city facility data via City Data Portal API.
 
-	2. Unsupervised_Cluster (for selecting States with similar demographic features with Illinois)
+	2. Visualization files
+		1. pl_choropleth_map.py
 
-		1. Function for by-county crime rate plotting
-		
-		![](readmepic/2.png)
+			Create county-level crime-rate interactive choropleth plot.
 
-		2. Function for by-state crime rate plotting
-		
-		![](readmepic/3.png)
+		2. pl_heat_map.py
 
-		3. Hierarchical Clustering
-		
-		![](readmepic/4.png)
+			Create heat map of homicide cases in Chicago on Google Map.
 
-		4. K-means Clustering
-		
-		![](readmepic/5.png)
+		3. pl_type_count.py
 
-	3. Supervised_And_Synth include linear regression model and synthetic control method.
 
-		1. Linear model construction
-		
-		![](readmepic/6.png)
 
-		2. Model Regularization
-		
-		![](readmepic/7.png)
-		
-		3. Bootstrapping
-		4. Synth Method
-3. STATA: This folder include the do files showing the further statistical analysis for Bootstrapping and Synthetic Control Method.
-4. Excel: This folder include the xlsx files we use to draw our trends.
-5. PDFs: Final presentation and Final report.
+	3. Machine Learning
+		1. ml_unsupervised_clustering.py
+
+			In this part, we use unsurpervised machine learning algorithms to divide 51 states of U.S. into three groups based on demographic features and crime rates. We applied both hierarchical clusteirng and k-means and selected states in the same group with Illinois in both methods for further analysis.
+
+			1. Hierarchical Clustering: Ward
+
+			2. K-means: K = 3
+
+		2. ml_supervised_regression.py
+
+			In this part, we regress crime rate by block against facility data. Data are splitted into training(80%) and testing set(20%) and normalization is performed before regression. Also, we applied bootstrapping to test stability of the model. 
+
